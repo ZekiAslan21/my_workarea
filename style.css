@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'elektrolize', sans-serif;
+    height: 200vh;
+}
+
+.container {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    background-color: black;
+    height: 60px;
+    color: rgb(249, 248, 248);
+    position: sticky;
+    top: 0;
+}
+
+.navbar-wraper {
+    display: flex;
+    justify-content: space-between;
+    /* esnek ogeleri kabın ortasına hizala diyor*/
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-wraper {
+
+    width: 500px;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+    padding: 0;
+}
+
+.menu-list-item {
+    cursor: pointer;
+}
+
+.profil-container {
+    display: flex;
+    /* bu sınıftaki elemanları yan yana diz diyor         */
+    align-items: center;
+    /* bu sınıftaki elemanları ortada hizala diyor        */
+    column-gap: 20px;
+    /* bu sınıftaki etiketlerin aralarını 20 piksel acar  */
+}
+
+.profil-text-container {
+    display: flex;
+    text-align: center;
+    column-gap: 5px;
+    line-height: 1;
+
+}
+
+.toggle {
+    width: 40px;
+    background-color: white;
+    height: 20px;
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* koşelerden boşluk bırak */
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: rgb(4, 4, 4);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+}
+
+.menu-list-item:hover {
+    font-weight: bold;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profil-picture {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    /* elemanı yerleştir ne kadar sığarsa diyor*/
+    border-radius: 50%;
+    /* bu elemanı yüzde elli kıvır demek */
+}
+
+.profil-text-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 1;
+}
+
+.sidebar {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    position: fixed;
+    top: 0;
+
+}
+
+.sidebar i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.sidebar i:hover {
+    color: rgb(243, 11, 11);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.featured-content {
+    background: url(img/main/background.jpg);
+    margin-left: 50px;
+    padding: 50px;
+    height: calc(100vh - 160px);
+    background-size: 100% 100%;
+}
+
+.fetured-title {
+    height: 400px;
+    border: 4px solid red;
+    border-radius: 24px;
+}
+
+.featured-desch {
+    color: rgb(239, 235, 235);
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 10px;
+}
+
+.featured-buttons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.featured-buttons button {
+    padding: 10px 25px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    font-size: 16px;
+    font-style: oblique;
+    background-color: red;
+    font-weight: bold;
+}
+
+.movie-list-filter {
+    margin-left: 60px;
+    padding: 20px;
+
+}
+
+.movie-list-filter select {
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    padding: 8px 0;
+    width: 125px;
+    border-radius: 10%;
+    cursor: pointer;
+
+}
+
+.movie-list-container {
+    margin-left: 70px;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.movie-item {
+    position: relative;
+
+}
+
+.movie-item-img {
+    width: 300px;
+
+}
+
+.movie-item-title {
+    background-color: rgba(40, 40, 40, 0.5);
+    /* Renk formatı düzeltildi */
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+}
+
+.movie-item-butons {
+    background-color: rgba(119, 115, 115, 0.4);
+    /* Renk formatı düzeltildi */
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    margin-right: 10%;
+    display: flex;
+    /* column-gap'in çalışması için eklendi */
+    column-gap: 20px;
+}
+
+.movie-list-wraper {
+    height: 100%;
+    width: 100%;
+}
+
+.movie-item-butons:hover {
+    background-color: rgba(243, 8, 8, 0.4);
+    /* Renk formatı düzeltildi */
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    margin-right: 10%;
+    display: flex;
+    /* column-gap'in çalışması için eklendi */
+    column-gap: 20px;
+}
+
+.movie-item:hover {
+    position: relative;
+    font-size: large;
+
+}
